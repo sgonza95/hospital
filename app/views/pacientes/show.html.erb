@@ -1,0 +1,22 @@
+<h3><font color="red">Datos del Paciente:</font><h3>
+<h3>nombre: <%= @paciente.nombrepaciente %></h3>
+<h3>apellido: <%= @paciente.apepaciente %></h3>
+
+<h3>Medico del Paciente:></h3>
+<% @medicos.each do |medico| %>
+<strong>Nombre : </strong>
+<%= medico.nombremedico %>
+<strong>Apellido : </strong>
+<%= medico.apemedico %>
+<br>
+<% end %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<%= link_to 'Edit', edit_paciente_path(@paciente) %> |
+<%= link_to 'Back', pacientes_path %>

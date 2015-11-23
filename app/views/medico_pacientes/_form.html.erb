@@ -1,0 +1,26 @@
+<%= form_for(@medico_paciente) do |f| %>
+  <% if @medico_paciente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@medico_paciente.errors.count, "error") %> prohibited this medico_paciente from being saved:</h2>
+
+      <ul>
+      <% @medico_paciente.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :medico_id %><br>
+    <%= f.select("medico_id",Medico.all.collect{|l| [ l.nombremedico, l.id ] }, {include_blank: 'Seleccione Medico'}) %>
+
+  </div>
+  <div class="field">
+    <%= f.label :paciente_id %><br>
+    <%= f.select("paciente_id",Paciente.all.collect{|l| [ l.nombrepaciente, l.id ] }, {include_blank: 'Seleccione Paciente'}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+<h3><font color="red">Detalle del Medico - Paciente :></font></h3>
+
+
+<p>
+  <strong>Medico:</strong>
+  <%= @medico_paciente.medico.nombremedico %>
+</p>
+
+<p>
+  <strong>Paciente:</strong>
+  <%= @medico_paciente.paciente.nombrepaciente %>
+</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<%= link_to 'Edit', edit_medico_paciente_path(@medico_paciente) %> |
+<%= link_to 'Back', medico_pacientes_path %>
