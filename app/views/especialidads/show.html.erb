@@ -1,0 +1,23 @@
+<h3><font color="red">Especialidad :</font><h3>
+<h3>Nombre especialidad: <%= @especialidad.nombreespe %></h3>
+<h3>Sala: <%= @especialidad.sala %></h3>
+
+<<h3><font color="red">Especialidad del Medico:</font><h3>
+<% @medicos.each do |medico| %>
+<strong>Nombre : </strong>
+<%= medico.nombremedico %>
+<strong>Apellido : </strong>
+<%= medico.apemedico %>
+
+<br>
+<% end %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<%= link_to 'Edit', edit_especialidad_path(@especialidad) %> |
+<%= link_to 'Back', especialidads_path %>
