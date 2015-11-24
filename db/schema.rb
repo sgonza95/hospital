@@ -33,9 +33,8 @@ ActiveRecord::Schema.define(version: 20151111233828) do
   create_table "medicos", force: :cascade do |t|
     t.string   "nombremedico"
     t.string   "apemedico"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.integer  "especialidad_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "pacientes", force: :cascade do |t|
